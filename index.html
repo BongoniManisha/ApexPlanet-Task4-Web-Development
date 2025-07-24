@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Full Project</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Manisha Bongoni</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#todo">To-Do</a>
+      <a href="#products">Products</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Portfolio -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I’m a passionate web developer with skills in HTML, CSS, and JavaScript.</p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <ul>
+      <li>Portfolio Website</li>
+      <li>To-Do List with Local Storage</li>
+      <li>Product Listing with Filtering & Sorting</li>
+    </ul>
+  </section>
+
+  <!-- To-Do App -->
+  <section id="todo">
+    <h2>To-Do List</h2>
+    <input type="text" id="taskInput" placeholder="Add a task">
+    <button onclick="addTask()">Add</button>
+    <ul id="taskList"></ul>
+  </section>
+
+  <!-- Product Filter -->
+  <section id="products">
+    <h2>Product Listing</h2>
+    <label>Category:
+      <select id="categoryFilter" onchange="filterAndSort()">
+        <option value="all">All</option>
+        <option value="electronics">Electronics</option>
+        <option value="books">Books</option>
+      </select>
+    </label>
+
+    <label>Sort by:
+      <select id="sortOption" onchange="filterAndSort()">
+        <option value="rating">Rating</option>
+        <option value="price">Price</option>
+      </select>
+    </label>
+
+    <div id="productContainer"></div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
